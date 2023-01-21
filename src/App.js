@@ -1,7 +1,8 @@
 import "./App.css";
-import Home from "./Home";
-import Header from "./Header";
-import Checkout from "./Checkout";
+import Home from "./components/shopeHome/Home";
+import Header from "./components/shopeHome/Header";
+import Checkout from "./components/checkout/Checkout";
+import Login from "./components/auth/Login";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -10,11 +11,10 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route  path="/checkout" element={ <Header  />  }></Route>
-          <Route  path="/checkout" element={<Checkout />}></Route>
-
-          {/* <Route path="/" element={<Header />}></Route> */}
-          <Route path="/" element={<Home />} ></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/header" element={<Header/>}></Route>
+          <Route path="/checkout" element={<Checkout/>}></Route>          
+          <Route path="/" element={<Home />}></Route>
         </Routes>
       </Router>
     </div>
